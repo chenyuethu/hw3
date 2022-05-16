@@ -25,13 +25,6 @@ post["place_id"] = mexico["id"]
 post.save
 
 post = Post.new
-post["title"] = "Ate tacos"
-post["description"] = "Checked out Ate tacos."
-post["posted_on"] = "2022-01-01"
-post["place_id"] = mexico["id"]
-post.save
-
-post = Post.new
 post["title"] = "Lisa and Jim's Wedding"
 post["description"] = "attended the wedding."
 post["posted_on"] = "2022-01-01"
