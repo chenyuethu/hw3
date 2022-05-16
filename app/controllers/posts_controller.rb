@@ -8,13 +8,12 @@ class PostsController < ApplicationController
 
     def create
         @post = Post.new
-        @contact["first_name"] = params["contact"]["first_name"]
-        @contact["last_name"] = params["contact"]["last_name"]
-        @contact["email"] = params["contact"]["email"]
-        @contact["phone_number"] = params["contact"]["phone_number"]
-        @contact["company_id"] = params["contact"]["company_id"]
-        @contact.save
-        redirect_to "/companies/#{@contact["company_id"]}"
+        @post["title"] = params["post"]["title"]
+        @post["description"] = params["post"]["description"]
+        @post["posted_on"] = params["post"]["posted_on"]
+        @post["place_id"] = params["post"]["place_id"]
+        @post.save
+        redirect_to "/places/#{@post["place_id"]}"
     end
 
 end
